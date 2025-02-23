@@ -1,4 +1,4 @@
-import { array } from "prop-types";
+import PropTypes from 'prop-types'
 
 import { GifItem } from "./GifItem";
 
@@ -19,7 +19,7 @@ export const GifGrid = ({ category }) => {
                 images.map( ( image ) => (
                     <GifItem 
                         key={ image.id } 
-                        { ...image }            
+                        { ...image }        
                     />
                 ))
             }
@@ -29,5 +29,5 @@ export const GifGrid = ({ category }) => {
 }
 
 GifGrid.propTypes = {
-    category: array.isRequired
+    category: PropTypes.string.isRequired
 }
